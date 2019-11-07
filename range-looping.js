@@ -2,7 +2,7 @@
 let range = function(start, end, step){
   let array = [];
   if (start > end || step <= 0 || start === undefined || end === undefined || step === undefined){
-    return [];
+    return []; // I spent 3 hours because I read the exercise wrong, was returning undefined instead of empty array
   } else {
     for (let i = start; i <= end; i += step){
       array.push(i);
