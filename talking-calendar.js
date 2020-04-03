@@ -3,7 +3,9 @@
 // We will have to parse the given string and produce a human readable date.
 
 const talkingCalendar = function(date) {
-
+  let humanReadable = "";
+  let dayEnding = "";
+  
   const monthKeys = {
     "01": "January",
     "02": "February",
@@ -17,14 +19,26 @@ const talkingCalendar = function(date) {
     "10": "October",
     "11": "November",
     "12": "December"
-  }
+  };
   
-  let humanReadable = date.split("");
+  let stringThis = date.split("");
+  // build the month in human form
   const newKey = `${date[5]}${date[6]}`;
-  console.log(monthKeys[newKey]);
+  const month = monthKeys[newKey];
+  // build the day in human form
+  if (stringThis[9] == 1) {
+   dayEnding = "st";
+  } else if (stringThis[9] == 2) {
+   dayEnding = "nd";
+  } else if (stringThis[9] == 3) {
+   dayEnding = "rd";
+  } else {
+   dayEnding = "th";
+  }
+  console.log(dayEnding);
   return humanReadable;
 
 }
 
 console.log(talkingCalendar("2020/04/03"));
-console.log(talkingCalendar("2020/10/13"));
+console.log(talkingCalendar("2020/10/09"));
