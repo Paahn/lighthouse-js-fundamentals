@@ -4,8 +4,10 @@
 
 const talkingCalendar = function(date) {
   
+  let humanReadable = "";
+
   return humanReadable;
 
 }
 
-talkingCalendar("2020/04/03");
+console.log(talkingCalendar("2020/04/03"));
