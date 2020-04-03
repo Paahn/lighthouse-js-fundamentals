@@ -35,7 +35,9 @@ const talkingCalendar = function(date) {
   } else {
    dayEnding = "th";
   }
-  console.log(dayEnding);
+  const day = `${date[8]}${date[9]}${dayEnding}`;
+  const year = `${date[0]}${date[1]}${date[2]}${date[3]}`;
+  humanReadable = `${month} ${day}, ${year}`
   return humanReadable;
 
 }
