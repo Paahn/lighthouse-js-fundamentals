@@ -1,0 +1,1 @@
+A collection of katas and other problems solved in javascript. Taken from the Lighthouse Labs curriculum.
