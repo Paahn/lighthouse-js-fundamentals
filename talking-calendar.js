@@ -5,6 +5,7 @@
 const talkingCalendar = function(date) {
   let humanReadable = "";
   let dayEnding = "";
+  let day = "";
   
   const monthKeys = {
     "01": "January",
@@ -35,7 +36,12 @@ const talkingCalendar = function(date) {
   } else {
    dayEnding = "th";
   }
-  const day = `${date[8]}${date[9]}${dayEnding}`;
+  if ( date[8] == 0) {
+    day = `${date[9]}${dayEnding}`;
+  } else {
+    day = `${date[8]}${date[9]}${dayEnding}`;
+  }
+  
   const year = `${date[0]}${date[1]}${date[2]}${date[3]}`;
   humanReadable = `${month} ${day}, ${year}`
   return humanReadable;
@@ -44,3 +50,4 @@ const talkingCalendar = function(date) {
 
 console.log(talkingCalendar("2020/04/03"));
 console.log(talkingCalendar("2020/10/09"));
+console.log(talkingCalendar("2020/11/21"));
